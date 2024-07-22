@@ -1,0 +1,32 @@
+.main-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex: 1 1 auto;
+    flex-direction: column;
+    position: relative;
+}
+.content-no-telegram {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.content-no-telegram p {
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: 24px;
+    text-align: center;
+    color: white;
+}
+.content-no-telegram a {
+    color: #fff;
+    font-size: 24px;
+}
+a {
+    text-decoration: none;
+}
+body {
+    background-color: black;
+}
