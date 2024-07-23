@@ -39,7 +39,6 @@ body {
 }
 #unity-canvas {
     position: absolute;
-    left: 0px;
     top: 0px;
     width: 1080px;
     height: 1920px; 
@@ -48,17 +47,16 @@ body {
 }
 #loading {
     position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
+    top: 0px;
+    bottom: 0px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
 }
 #loading img {
+    position: absolute;
     width: 1080px;
     height: 1920px; 
     object-fit: cover;
+    top: 0px;
 }
