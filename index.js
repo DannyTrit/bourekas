@@ -15,6 +15,8 @@ if (hasTgData()) {
 
     webApp.enableClosingConfirmation();
     webApp.disableVerticalSwipes();
+    webApp.expand();
+
     var script = document.createElement("script");
     script.src = loaderUrl;
     let unityLogoDurationMs = 3000;
@@ -47,7 +49,7 @@ var config = {
     streamingAssetsUrl: "StreamingAssets",
     companyName: "DefaultCompany",
     productName: "Bourekas",
-    productVersion: "0.0.1"
+    productVersion: "0.0.2"
 };
 
 if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
@@ -63,7 +65,6 @@ function hasTgData() {
     if (!(webApp && (webApp.platform.toLowerCase() == "android" || webApp.platform.toLowerCase() == "ios"))) {
         canvas.remove();
         showQR();
-        loading.style.display = "none";
         return false;
     }
     return true;
