@@ -11,7 +11,7 @@ var canvas = document.querySelector("#unity-canvas");
 var loading = document.querySelector("#loading");
 var warningBanner = document.querySelector("#warningBanner");
 var loaderUrl = buildUrl + "/bourekas-web.loader.js";
-var unityhInstance;
+var unityInstance;
 var config = {
     dataUrl: buildUrl + "/bourekas-web.data",
     frameworkUrl: buildUrl + "/bourekas-web.framework.js",
@@ -35,20 +35,7 @@ if (true) {
     let unityLogoDurationMs = 3000;
 
     script.onload = () => {
-        createUnityInstance(canvas, config, (progress) => {
-            
-        }).then((unityInstance) => {
-        /*
-            window.setTimeout(function () { // do not display unity logo in the middle of html loading screen
-                hideLoadingScreen();
-                console.log("#index unity logo hidden");
-            }, unityLogoDurationMs);
-        */
-            unityhInstance = uInstance;
-        }).catch(function (message) {
-            console.log("#index createUnityInstance catch: " + message);
-            alert(message);
-        });
+        createUnityInstance(canvas, config);
     };
     document.body.appendChild(script);
 }
