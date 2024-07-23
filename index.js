@@ -23,7 +23,7 @@ var config = {
 
 const webApp = getTelegramWebApp();
 if (true) {
-    //showLoading();
+    showLoading();
 
     //webApp.enableClosingConfirmation();
     //webApp.disableVerticalSwipes();
@@ -37,12 +37,12 @@ if (true) {
         createUnityInstance(canvas, config, (progress) => {
             
         }).then((uInstance) => {
-        /*
-            window.setTimeout(function () { // do not display unity logo in the middle of html loading screen
-                hideLoadingScreen();
-                console.log("#index unity logo hidden");
-            }, unityLogoDurationMs);
-        */
+        
+        window.setTimeout(function () { // do not display unity logo in the middle of html loading screen
+            hideLoadingScreen();
+            console.log("#index unity logo hidden");
+        }, unityLogoDurationMs);
+        
             unityInstance = uInstance;
         }).catch(function (message) {
             console.log("#index createUnityInstance catch: " + message);
@@ -78,7 +78,6 @@ function showQR() {
 }
 
 function showLoading() {
-    loading.style.display = "block";
     viewContent.style.opacity = 0;
 }
 

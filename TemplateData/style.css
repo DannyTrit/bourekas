@@ -1,3 +1,7 @@
+* {
+    padding: 0;
+    margin: 0;
+}
 .main-center {
     align-items: center;
     display: flex;
@@ -29,4 +33,32 @@ a {
 }
 body {
     background-color: black;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+#unity-canvas {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 1080px;
+    height: 1920px; 
+    touch-action: none;
+    cursor: inherit;
+}
+#loading {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+#loading img {
+    width: 1080px;
+    height: 1920px; 
+    object-fit: cover;
 }
