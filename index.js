@@ -78,11 +78,11 @@ function showQR() {
 }
 
 function showLoading() {
-    viewContent.style.opacity = 0;
+    canvas.style.opacity = 0;
 }
 
 function hideLoadingScreen() {
-    viewContent.style.opacity = 1;
+    canvas.style.opacity = 1;
 }
 
 function showMessage(msg, type) {
