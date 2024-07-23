@@ -21,8 +21,6 @@ var config = {
     productVersion: "0.0.2"
 };
 
-viewContent.style.background = "url(Build/bourekas-web.jpg) center / cover;";
-
 const webApp = getTelegramWebApp();
 if (true) {
     showLoading();
