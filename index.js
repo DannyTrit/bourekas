@@ -4,11 +4,24 @@ window.addEventListener("load", function () {
     }
 });
 
+
+var buildUrl = "Build";
 var viewContent = document.querySelector("#viewContent");
 var canvas = document.querySelector("#unity-canvas");
 var loading = document.querySelector("#loading");
 var warningBanner = document.querySelector("#warningBanner");
+var loaderUrl = buildUrl + "/bourekas-web.loader.js";
 var unityhInstance;
+var config = {
+    dataUrl: buildUrl + "/bourekas-web.data",
+    frameworkUrl: buildUrl + "/bourekas-web.framework.js",
+    codeUrl: buildUrl + "/bourekas-web.wasm",
+    streamingAssetsUrl: "StreamingAssets",
+    companyName: "DefaultCompany",
+    productName: "Bourekas",
+    productVersion: "0.0.2"
+};
+
 const webApp = getTelegramWebApp();
 if (true) {
     //showLoading();
@@ -40,17 +53,7 @@ if (true) {
     document.body.appendChild(script);
 }
 
-var buildUrl = "Build";
-var loaderUrl = buildUrl + "/bourekas-web.loader.js";
-var config = {
-    dataUrl: buildUrl + "/bourekas-web.data",
-    frameworkUrl: buildUrl + "/bourekas-web.framework.js",
-    codeUrl: buildUrl + "/bourekas-web.wasm",
-    streamingAssetsUrl: "StreamingAssets",
-    companyName: "DefaultCompany",
-    productName: "Bourekas",
-    productVersion: "0.0.2"
-};
+
 
 if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
     // Mobile device style: fill the whole browser client area with the game canvas:
