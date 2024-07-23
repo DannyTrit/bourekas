@@ -10,12 +10,12 @@ var loading = document.querySelector("#loading");
 var warningBanner = document.querySelector("#warningBanner");
 var unityhInstance;
 const webApp = getTelegramWebApp();
-if (hasTgData()) {
+if (true) {
     //showLoading();
 
-    webApp.enableClosingConfirmation();
-    webApp.disableVerticalSwipes();
-    webApp.expand();
+    //webApp.enableClosingConfirmation();
+    //webApp.disableVerticalSwipes();
+    //webApp.expand();
 
     var script = document.createElement("script");
     script.src = loaderUrl;
