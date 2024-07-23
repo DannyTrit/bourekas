@@ -11,7 +11,7 @@ var warningBanner = document.querySelector("#warningBanner");
 var unityhInstance;
 const webApp = getTelegramWebApp();
 if (hasTgData()) {
-    showLoading();
+    //showLoading();
 
     webApp.enableClosingConfirmation();
     webApp.disableVerticalSwipes();
@@ -23,13 +23,12 @@ if (hasTgData()) {
         createUnityInstance(canvas, config, (progress) => {
             
         }).then((unityInstance) => {
-            unityInstanceRef = unityInstance;
-            loadingBar.style.display = "none";
+        /*
             window.setTimeout(function () { // do not display unity logo in the middle of html loading screen
                 hideLoadingScreen();
                 console.log("#index unity logo hidden");
             }, unityLogoDurationMs);
-
+        */
             unityhInstance = uInstance;
         }).catch(function (message) {
             console.log("#index createUnityInstance catch: " + message);
@@ -48,7 +47,7 @@ var config = {
     streamingAssetsUrl: "StreamingAssets",
     companyName: "DefaultCompany",
     productName: "Bourekas",
-    productVersion: "0.1.5"
+    productVersion: "0.0.1"
 };
 
 if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
@@ -71,7 +70,7 @@ function hasTgData() {
 }
 
 function showQR() {
-    var qr = `<div id="qr"><main class="main-center"><div class="content-no-telegram"><p>Play on your mobile</p><a href="https://t.me/bourekas_game_bot"><img src="TemplateData/images/qr.png" alt="@bourekas_game_bot"></a><a href="https://t.me/bourekas_game_bot">@bourekas_game_bot</a><p>${webApp} ${webApp?.platform?.toLowerCase()}</p></div></main></div>`;
+    var qr = `<div id="qr"><main class="main-center"><div class="content-no-telegram"><p>Play on your mobile</p><a href="https://t.me/bourekas_game_bot"><img src="TemplateData/images/qr.png" alt="@bourekas_game_bot"></a><a href="https://t.me/bourekas_game_bot">@bourekas_game_bot</a><p>${webApp?.platform?.toLowerCase()}</p></div></main></div>`;
     viewContent.innerHTML = qr;
 }
 

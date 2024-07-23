@@ -1,4 +1,4 @@
-const cacheName = "DefaultCompany-Bourekas-0.1.5";
+const cacheName = "DefaultCompany-Bourekas-0.0.1";
 const contentToCache = [
     "Build/bourekas-web.loader.js",
     "Build/bourekas-web.framework.js",
