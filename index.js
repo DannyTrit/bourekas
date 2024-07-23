@@ -21,6 +21,8 @@ var config = {
     productVersion: "0.0.2"
 };
 
+viewContent.style.background = "url(Build/bourekas-web.jpg) center / cover;";
+
 const webApp = getTelegramWebApp();
 if (true) {
     showLoading();
@@ -52,8 +54,6 @@ if (true) {
     document.body.appendChild(script);
 }
 
-
-
 if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
     // Mobile device style: fill the whole browser client area with the game canvas:
     var meta = document.createElement('meta');
@@ -82,7 +82,6 @@ function showLoading() {
 }
 
 function hideLoadingScreen() {
-    loading.style.display = "none";
     viewContent.style.opacity = 1;
 }
 

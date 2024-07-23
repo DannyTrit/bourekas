@@ -45,6 +45,10 @@ body {
     touch-action: none;
     cursor: inherit;
 }
+#viewContent {
+    width: 1080px;
+    height: 1920px;
+}
 #loading {
     position: absolute;
     top: 0px;
