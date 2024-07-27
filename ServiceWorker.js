@@ -1,9 +1,9 @@
 const cacheName = "DefaultCompany-Bourekas-0.0.2";
 const contentToCache = [
-    "Build/bourekas-web.loader.js",
-    "Build/bourekas-web.framework.js",
-    "Build/bourekas-web.data",
-    "Build/bourekas-web.wasm",
+    "Build/Builds.loader.js",
+    "Build/Builds.framework.js",
+    "Build/Builds.data",
+    "Build/Builds.wasm",
     "TemplateData/style.css"
 
 ];

@@ -41,8 +41,6 @@ body {
     position: absolute;
     top: 0px;
     left: 0px;
-    width: 1080px;
-    height: 1920px; 
     touch-action: none;
     cursor: inherit;
 }
@@ -51,5 +49,5 @@ body {
     top: 0px;
     left: 0px;
     width: 1080px;
-    height: 1920px;
+    height: 1920px; 
 }

@@ -10,11 +10,11 @@ var loading = document.querySelector("#loading");
 var warningBanner = document.querySelector("#warningBanner");
 var unityInstance;
 var buildUrl = "Build";
-var loaderUrl = buildUrl + "/bourekas-web.loader.js";
+var loaderUrl = buildUrl + "/Builds.loader.js";
 var config = {
-    dataUrl: buildUrl + "/bourekas-web.data",
-    frameworkUrl: buildUrl + "/bourekas-web.framework.js",
-    codeUrl: buildUrl + "/bourekas-web.wasm",
+    dataUrl: buildUrl + "/Builds.data",
+    frameworkUrl: buildUrl + "/Builds.framework.js",
+    codeUrl: buildUrl + "/Builds.wasm",
     streamingAssetsUrl: "StreamingAssets",
     companyName: "DefaultCompany",
     productName: "Bourekas",
@@ -51,6 +51,8 @@ if (true) {
     };
     document.body.appendChild(script);
 }
+
+
 
 if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
     // Mobile device style: fill the whole browser client area with the game canvas:
