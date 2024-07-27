@@ -1,0 +1,26 @@
+<IfModule mod_mime.c>
+  AddType application/wasm .wasm
+
+  # Разрешаем кросс-доменные запросы с любого источника (*)
+  Header set Access-Control-Allow-Origin "*"
+
+  # Разрешаем методы GET, POST, OPTIONS, DELETE, PUT
+  Header always set Access-Control-Allow-Methods: "GET,POST,OPTIONS,DELETE,PUT"
+
+  # Разрешаем определенные заголовки запроса
+  Header always set Access-Control-Allow-Headers: "DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type"
+
+  # Разрешаем использование cookies и других учетных данных в кросс-доменных запросах
+  Header always set Access-Control-Allow-Credentials true
+
+  # Устанавливаем максимальное время ожидания предварительной проверки CORS
+  Header always set Access-Control-Max-Age 1728000
+
+  # Обработка предварительных запросов OPTIONS
+  RewriteCond %{REQUEST_METHOD} OPTIONS
+  RewriteRule ^(.*)$ $1 [R=204,L]
+
+  Header set Cache-Control "no-cache, no-store, must-revalidate"  
+  Header set Pragma "no-cache"  
+  Header set Expires 0 
+</IfModule>
